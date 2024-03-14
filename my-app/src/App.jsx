@@ -79,7 +79,7 @@ function App() {
 
   return (
     <div>
-      <UserForm addUser={addUser} />
+      <UserForm onSubmit={addUser} />
       <UserList users={users} />
     </div>
   );
