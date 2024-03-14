@@ -35,7 +35,7 @@ function App() {
 }
 
 export default App
-*/
+
 
 import React from 'react';
 
@@ -61,6 +61,28 @@ function App() {
   ];
   
   return <TaskList tasks={tasks} />;
+}
+
+export default App; */
+
+import React, { useState } from "react";
+import UserList from "./components/UserList";
+import UserForm from "./components/UserForm";
+
+
+function App() {
+  const [users, setUsers] = useState([]);
+
+  const addUser = (user) => {
+    setUsers([...users, user]);
+  };
+
+  return (
+    <div>
+      <UserForm addUser={addUser} />
+      <UserList users={users} />
+    </div>
+  );
 }
 
 export default App;
